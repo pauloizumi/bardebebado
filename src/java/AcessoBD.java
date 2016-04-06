@@ -23,7 +23,9 @@ public class AcessoBD {
             "jdbc:mysql://localhost/bar?user = root & password = ");
 System.out.println("AcessoBD> Conexão bem sucedida!!");
             stm = con.createStatement();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
+            System.err.println("Excessão: " + e.toString());
+        }catch(ClassNotFoundException e){
             System.err.println("Excessão: " + e.toString());
         }
     }
