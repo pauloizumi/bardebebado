@@ -21,7 +21,7 @@
         <title>Gravação de dados</title>
     </head>
     <body>
-        <sql:setDataSource var="bar" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/bar" user="root" password="ifsp"/>
+        <sql:setDataSource var="bar" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/bar" user="root" password=""/>
         <sql:update dataSource="${bar}" var="resultado">        
                 INSERT INTO bares (nome, endereco)
                 VALUES ('<%= nome%>', '<%= endereco%>')            
@@ -30,5 +30,5 @@
 <br>
 <p align="center"><a href="index.jsp">Página Principal</a></p>
 </body>
-    </body>
+    
 </html>
